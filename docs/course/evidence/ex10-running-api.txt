@@ -1,0 +1,5 @@
+$ curl localhost:3988/api/stocks/aapl
+{"data":{"name":"Apple Inc.","symbol":"AAPL","previousClose":228.52,"lastPrice":231.4,"pe":34.5}}
+$ curl -i localhost:3988/api/stocks/XYZ
+HTTP/1.1 404 Not Found
+{"error":{"code":"NOT_FOUND","message":"Unknown symbol: XYZ"}}
