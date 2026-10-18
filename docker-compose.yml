@@ -1,0 +1,15 @@
+# Local development database only. Reads credentials from .env (see .env.example).
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?copy .env.example to .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?copy .env.example to .env}
+      POSTGRES_DB: ${POSTGRES_DB:-nasdaq_swipe}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

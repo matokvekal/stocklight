@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0a1f3d;
+  color: #fff;
+}
+
+.home {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}

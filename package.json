@@ -1,0 +1,27 @@
+{
+  "name": "nasdaq-swipe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nasdaq Swipe - simple stock analysis for non-professional investors (course project foundation)",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "workspaces": [
+    "apps/web",
+    "apps/api",
+    "packages/finance-core"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w @nasdaq-swipe/web",
+    "dev:api": "npm run dev -w @nasdaq-swipe/api",
+    "build": "npm run build -w @nasdaq-swipe/finance-core && npm run build -w @nasdaq-swipe/web && npm run build -w @nasdaq-swipe/api",
+    "db:up": "docker compose up -d db",
+    "db:migrate": "npm run db:migrate -w @nasdaq-swipe/api",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint .",
+    "test": "npm run test --workspaces --if-present",
+    "check:worker": "node scripts/worker-check.mjs",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run check:worker"
+  },
+  "devDependencies": {}
+}
