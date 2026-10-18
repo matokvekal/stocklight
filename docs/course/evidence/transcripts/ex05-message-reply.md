@@ -1,0 +1,1 @@
+For a P/E of 15 against a market P/E of 20, `describePe` returns "At 15, this stock is cheaper than the market average of 20: investors pay less for each dollar of earnings." It takes the "cheaper" branch because 15 is below the 18 cutoff (20 × 0.9).
