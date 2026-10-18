@@ -1,0 +1,10 @@
+codebase-memory-mcp:
+  Scope: Project config (shared via .mcp.json)
+  Status: ✔ Connected
+  Type: stdio
+  Command: codebase-memory-mcp
+  Args:
+  Environment:
+To remove this server, run: claude mcp remove codebase-memory-mcp -s project
+user-level mcpServers has codebase-memory-mcp: False
+codebase-memory-mcp: codebase-memory-mcp  - ✔ Connected
