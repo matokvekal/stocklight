@@ -1,7 +1,7 @@
 [project]
 name = "nasdaq-worker"
 version = "0.1.0"
-description = "Data ingestion worker for Nasdaq Swipe (foundation only)"
+description = "Data ingestion worker for S&P 500 Swipe"
 requires-python = ">=3.11"
 dependencies = []
 

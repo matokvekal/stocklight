@@ -4,6 +4,6 @@ import { App } from "./App";
 describe("App", () => {
   it("shows the product name", () => {
     render(<App />);
-    expect(screen.getByRole("heading", { name: "Nasdaq Swipe" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "S&P 500 Swipe" })).toBeInTheDocument();
   });
 });

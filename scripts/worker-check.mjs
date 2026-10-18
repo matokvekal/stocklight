@@ -10,11 +10,12 @@ const venvPython =
     : join(workerDir, ".venv", "bin", "python");
 const python = existsSync(venvPython) ? venvPython : process.platform === "win32" ? "python" : "python3";
 
-const steps = [
-  ["-m", "ruff", "check", "."],
-  ["-m", "mypy", "nasdaq_worker", "tests"],
-  ["-m", "pytest", "-q"],
-];
+const pytest = ["-m", "pytest", "-q"];
+// "test" runs only pytest; no argument also runs ruff and mypy.
+const steps =
+  process.argv[2] === "test"
+    ? [pytest]
+    : [["-m", "ruff", "check", "."], ["-m", "mypy", "nasdaq_worker", "tests"], pytest];
 
 for (const args of steps) {
   console.log(`> python ${args.join(" ")}`);
