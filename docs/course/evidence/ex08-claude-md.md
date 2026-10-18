@@ -1,6 +1,6 @@
 # Exercise 8 — A CLAUDE.md that gets followed
 
-`CLAUDE.md` (repo root, 33 lines): **Forbidden → Conventions → Stack → Commands → Open questions**, in that order; every Forbidden line ends with its reason after a colon. Sourced from the project rules (`.claude/rules/`, `docs/course/HOMEWORK.md`) and from what came up in exercises 2–4 (formatting via `formatSignedPercent`, RTL tests per component, no new dependencies, no styling while the UI design is pending).
+`CLAUDE.md` (repo root, 26 lines): **Forbidden → Conventions → Stack → Commands → Open questions**, in that order; every Forbidden line ends with its reason after a colon. Sourced from the project rules (`.claude/rules/`, `docs/course/HOMEWORK.md`) and from what came up in exercises 2–4 (formatting via `formatSignedPercent`, RTL tests per component, no new dependencies, no styling while the UI design is pending).
 
 ## A fresh session follows a rule without being told
 
